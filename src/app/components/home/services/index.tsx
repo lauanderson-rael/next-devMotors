@@ -6,7 +6,7 @@ import Image from "next/image"
 const Services = ({ object }: HomeProps) => {
     return (
         <>
-            <section className={styles.containerAbout} id="">
+            <section className={styles.containerAbout}>
                 <article className={styles.innerAbout}>
                     <h1 className={styles.title}>Sobre</h1>
                     <p>{object.metadata.about.description}</p>
@@ -26,7 +26,7 @@ const Services = ({ object }: HomeProps) => {
 
             <h2 className={styles.servicesTitle}>Conheça nossos serviços</h2>
 
-            <section className={styles.services}>
+            <section id="servicos" className={styles.services}>
                 {object.metadata.services.map((service) => (
                     <article key={service.description}>
 
