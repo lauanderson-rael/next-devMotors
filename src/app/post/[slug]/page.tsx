@@ -10,44 +10,44 @@ import { Metadata } from 'next'
 
 // metadados dinâmicos da pagina
 
-// export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-//     try {
-//         const { slug } = await params  // desestruturação para funcionar sem erro ou  'const paramsSlug = await params
-//         const { objects }: PostProps = await getItemBySlug(slug)
-//             .catch(() => {
-//                 return {
-//                     title: 'DevMotors - Sua oficina especializada',
-//                     description: 'Oficina de carros em Coelho Neto-MA',
-//                 }
-//             })
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    try {
+        const { slug } = await params  // desestruturação para funcionar sem erro ou  'const paramsSlug = await params
+        const { objects }: PostProps = await getItemBySlug(slug)
+            .catch(() => {
+                return {
+                    title: 'DevMotors - Sua oficina especializada',
+                    description: 'Oficina de carros em Coelho Neto-MA',
+                }
+            })
 
-//         return {
-//             title: `DevMotors - ${objects[0].title}`,
-//             description: `${objects[0].metadata.description.text}`,
-//             keywords: ['devMotors troca de óleo', 'devmotors', 'troca de óleo'],
-//             openGraph: {
-//                 title: `DevMotors - ${objects[0].title}`,
-//                 images: [`${objects[0].metadata.banner.url}`],
-//             },
-//             robots: {
-//                 index: true,
-//                 follow: true,
-//                 nocache: true,
-//                 googleBot: {
-//                     index: true,
-//                     follow: true,
-//                     noimageindex: true,
-//                 }
-//             }
-//         }
+        return {
+            title: `DevMotors - ${objects[0].title}`,
+            description: `${objects[0].metadata.description.text}`,
+            keywords: ['devMotors troca de óleo', 'devmotors', 'troca de óleo'],
+            openGraph: {
+                title: `DevMotors - ${objects[0].title}`,
+                images: [`${objects[0].metadata.banner.url}`],
+            },
+            robots: {
+                index: true,
+                follow: true,
+                nocache: true,
+                googleBot: {
+                    index: true,
+                    follow: true,
+                    noimageindex: true,
+                }
+            }
+        }
 
-//     } catch (error) {
-//         return {
-//             title: 'DevMotors - Sua oficina especializada',
-//             description: 'Oficina de carros em Coelho Neto-MA',
-//         }
-//     }
-// }
+    } catch (error) {
+        return {
+            title: 'DevMotors - Sua oficina especializada',
+            description: 'Oficina de carros em Coelho Neto-MA',
+        }
+    }
+}
 
 // fim metadados dinâmicos da pagina
 
