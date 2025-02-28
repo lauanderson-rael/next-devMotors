@@ -31,6 +31,7 @@ export function Hero({ heading, buttonUrl, buttonTitle, bannerUrl, icon }: HeroP
                     priority={true}
                     quality={100}
                     fill={true} //required --->  position: relative
+                    sizes='(max-width: 480px) 100vw, (max-width: 1024px)75vw, 60vw'
                 />
             </div>
         </main>

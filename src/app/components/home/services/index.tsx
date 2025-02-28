@@ -19,6 +19,7 @@ const Services = ({ object }: HomeProps) => {
                         alt="Imagem ilustrativa sobre a empresa Dev Motors"
                         quality={100}
                         fill={true}
+                        sizes='(max-width: 480px) 100vw, (max-width: 1024px)75vw, 60vw'
                     />
                 </div>
             </section>
@@ -32,10 +33,12 @@ const Services = ({ object }: HomeProps) => {
                         <div className={styles.innerService}>
                             <Image
                                 className={styles.imageService}
-                                src={service.image.url}
                                 alt="Imagem do serviço"
                                 quality={100}
                                 fill={true}
+                                priority
+                                src={service.image.url}
+                                sizes='(max-width: 480px) 100vw, (max-width: 1024px)75vw, 60vw'
                             />
                         </div>
 
