@@ -10,7 +10,7 @@ import { Metadata } from 'next'
 
 // metadados dinâmicos da pagina
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     try {
         const { slug } = await params  // desestruturação para funcionar sem erro ou  'const paramsSlug = await params
         const { objects }: PostProps = await getItemBySlug(slug)
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 // fim metadados dinâmicos da pagina
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
     const { objects }: PostProps = await getItemBySlug(slug)
     //console.log(JSON.stringify(objects, null, 2));
