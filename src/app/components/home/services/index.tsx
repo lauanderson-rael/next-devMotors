@@ -24,9 +24,9 @@ const Services = ({ object }: HomeProps) => {
                 </div>
             </section>
 
-            <h2 className={styles.servicesTitle}>Conheça nossos serviços</h2>
+            <h2 id="servicos" className={styles.servicesTitle}>Conheça nossos serviços</h2>
 
-            <section id="servicos" className={styles.services}>
+            <section  className={styles.services}>
                 {object.metadata.services.map((service) => (
                     <article key={service.description}>
 
