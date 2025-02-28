@@ -1,7 +1,7 @@
 .submenu{
     margin: 0 auto;
     max-width: 1280px;
-    padding: 64px 14px 4px 14px; // cima direita baixo esquerda
+    padding: 72px 14px 4px 14px; // cima direita baixo esquerda
 }
 .submenuIcon{
     display: none;
@@ -17,6 +17,7 @@
     padding: 14px 0;
     row-gap: 24px;
     column-gap: 14px;
+    margin-top: 5px;
 
     li a{
         background-color: #121212;
@@ -52,6 +53,7 @@
         background-color: #ffffff;
         width: 100%;
         height: 100%;
+
 
         &.open{
             display: flex;
